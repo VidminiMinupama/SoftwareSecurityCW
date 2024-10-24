@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Database configuration
-$servername = "Mysql@localhost:3306"; // Corrected
+$servername = "localhost"; // Corrected
 $username = "root"; // Your database username
 $password = "root"; // Your database password
 $dbname = "TheRealSound"; // Your database name
