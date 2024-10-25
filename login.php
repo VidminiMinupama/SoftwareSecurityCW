@@ -3,6 +3,11 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Secure session cookies
+ini_set('session.cookie_secure', '1'); // Ensures cookies are sent over HTTPS only
+ini_set('session.cookie_httponly', '1'); // Prevents access to cookies via JavaScript
+ini_set('session.cookie_samesite', 'Strict'); // Prevents CSRF attacks
+
 // Database configuration
 $servername = "localhost";
 $username = "root";
