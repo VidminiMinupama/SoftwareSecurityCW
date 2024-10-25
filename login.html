@@ -7,6 +7,7 @@
     <title>Music Website</title>
     <link rel="stylesheet" href="login.css">
     <link href="https://boxicons.com/">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
@@ -26,6 +27,8 @@
                 <div class="input-box">
                     <button class="btn" type="submit">Login</button>
                 </div>
+                <!-- Add CAPTCHA for login security -->
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
                 <div class="regi-link">
                     <p> Don't have an account? <a href="#" class="signUpLink"> Sign Up </a> </p>
                 </div>
@@ -46,13 +49,18 @@
                     <i class='bx bx-envelope'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" name="password" required>
+                    <!-- Enforce strong password policies here -->
+                    <input type="password" name="password" required 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}"
+                           title="Password must be at least 12 characters, include uppercase, lowercase, number, and special character.">
                     <label for="">Password</label>
                     <i class='bx bx-lock-alt'></i>
                 </div>
                 <div class="input-box">
                     <button class="btn" type="submit">Register</button>
                 </div>
+                <!-- Add CAPTCHA to prevent bot signups -->
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
                 <div class="regi-link">
                     <p> Already have an account? <a href="#" class="signInLink"> Sign In </a> </p>
                 </div>

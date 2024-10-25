@@ -109,7 +109,7 @@ body {
     transition: .5s;
 }
 
-.btn:hover:before {
+.btn:hover::before {
     top: 0;
 }
 
@@ -143,4 +143,10 @@ body {
     text-align: right;
     padding: 0 40px 60px 150px;
     display: none; /* Hidden by default */
+}
+
+#error-box {
+    display: none;
+    color: red;
+    margin-top: 10px;
 }
